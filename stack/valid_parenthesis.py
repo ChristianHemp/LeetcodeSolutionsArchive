@@ -1,3 +1,7 @@
+# Problem: https://leetcode.com/problems/valid-parentheses/
+# Approach: Basic stack to hold most recently inputted parenthesis to be accessed LIFO
+# Complexity: O(n) time, O(n) space
+
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
