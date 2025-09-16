@@ -1,4 +1,4 @@
-# Problem: https://leetcode.com/problems/plus-one/description/
+# Problem: https://leetcode.com/problems/plus-one/
 # Approach: Nested for loop to brute force the solution
 # Complexity: O(n²) time, O(1) space
 
