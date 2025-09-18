@@ -1,7 +1,6 @@
 # Problem: https://leetcode.com/problems/plus-one/
 # Approach: Nested for loop to brute force the solution
 # Complexity: O(n²) time, O(1) space
-
 # Note: Inteded to be solved with hash map, completed in first few hours of learning programming so solved brute force
 
 class Solution:
