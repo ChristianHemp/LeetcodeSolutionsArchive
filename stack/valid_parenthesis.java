@@ -1,3 +1,8 @@
+// Problem: https://leetcode.com/problems/valid-parentheses/
+// Approach: Basic stack to hold most recently inputted parenthesis to be accessed LIFO
+// Complexity: O(n) time, O(n) space
+
+
 import java.util.Stack;
 
 class Solution {
