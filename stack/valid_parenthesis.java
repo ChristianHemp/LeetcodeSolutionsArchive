@@ -1,5 +1,5 @@
 // Problem: https://leetcode.com/problems/valid-parentheses/
-// Approach: Basic stack to hold most recently inputted parenthesis to be accessed LIFO
+// Approach: Basic stack to hold most recently inputted parenthesis to be accessed LIFO -- trash solution just learning java stack syntax
 // Complexity: O(n) time, O(n) space
 
 
