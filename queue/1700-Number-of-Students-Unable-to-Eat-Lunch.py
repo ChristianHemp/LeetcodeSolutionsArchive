@@ -1,18 +1,18 @@
 # Problem: https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/
-# Approach: Keep a counter of the number of repititions to break out of loop, if beginning of queues are same remove from both queues and reset reps, otherwise add the student to end of the queue and increment reps
-# Complexity: O(n^2) time, O(n) space.
+# Approach: Create a counter to visualize how many students want each sandwich type. Iterate through sandwiches checking if there is still a student that wants that sandwich, decrementing the cnt and res
+# Complexity: O(1) time, O(n) space.
 
 class Solution:
     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
-        reps = 0
+        res = len(students)
+        cnt = Counter(students)
 
-        while reps < len(students):
-            if students[0] == sandwiches[0]:
-                students.pop(0)
-                sandwiches.pop(0)
-                reps = 0
+        for sandwich in sandwiches:
+            if cnt[sandwich] > 0:
+                res -= 1
+                cnt[sandwich] -= 1
             else:
-                students.append(students.pop(0))
-                reps += 1
+                return res
         
-        return len(students)
+        return res
+        
