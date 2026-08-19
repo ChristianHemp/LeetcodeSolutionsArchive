@@ -1,7 +1,7 @@
 # Problem: https://leetcode.com/problems/lru-cache/
 # Approach: Used a hashmap of keys to Node objects, as LRU/MRU priority is kept track of in a linked list, which has O(1) accessing/removal when node address is known, which can be gotten O(1) with the hashmap.
 #           Dummy nodes used to prevent edge cases, with put and get updating LRU priority along with hashmap contents seamlessly
-# Complexity: O(1) time, O(n) space
+# Complexity: O(1) time, O(n) space where n is capacity
 # Enjoyment: 5/5
 
 class Node:
