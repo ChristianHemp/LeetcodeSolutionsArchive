@@ -15,6 +15,8 @@ class LRUCache:
     def __init__(self, capacity: int):
         self.cache = {}
         self.capacity = capacity
+
+        # init doubly linked list w/ dummy nodes
         self.head = Node(-1, -1)
         self.tail = Node(-1, -1)
         self.head.next = self.tail
@@ -50,6 +52,8 @@ class LRUCache:
             curr.next = self.tail
         else:
             self.cache[key] = Node(key, value)
+
+            # cache full
             if len(self.cache) > self.capacity:
                 # remove LRU node
                 remove_key = self.head.next.key
@@ -65,6 +69,7 @@ class LRUCache:
                 new_node.prev = curr
                 new_node.next = self.tail
                 self.tail.prev = new_node
+            # cache not full
             else:
                 # add new LRU node
                 new_node = self.cache[key]
@@ -73,4 +78,3 @@ class LRUCache:
                 new_node.prev = curr
                 new_node.next = self.tail
                 self.tail.prev = new_node
-            
