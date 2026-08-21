@@ -1,6 +1,7 @@
 # Problem: https://leetcode.com/problems/max-area-of-island/
 # Approach: Search through matrix indices for island indices and remove all adjacent island indicies while incrementing curr_size. At each island update result if the new island size larger than current largest (res).
 # Complexity: O(n * m) time where n is rows and m is cols, O(n * m) space (callstack)
+# Enjoyment: 4/5
 
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
