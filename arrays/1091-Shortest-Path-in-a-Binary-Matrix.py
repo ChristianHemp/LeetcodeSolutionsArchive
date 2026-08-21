@@ -34,8 +34,8 @@ class Solution:
                         (nr, nc) in visited or grid[nr][nc] == 1):
                         continue
                     
-                    q.append((r + dr, c + dc))
-                    visited.add((r + dr, c + dc))
+                    q.append((nr, nc))
+                    visited.add((nr, nc))
             length += 1
         
         return -1
