@@ -2,6 +2,7 @@
 # Approach: Use dp to build pseudomatrix up starting from bottom left corner (destination) and moving left along each row adding the values to the right and down directions of each index
 #           Last index in each row will always be 1 (the way to destination is always straight down if in last row since only right and down directions allowed)
 # Complexity: O(r * c) time, O(c) space where r is num of rows and c is num of cols
+# Enjoyment: 3/5
 
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
