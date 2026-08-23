@@ -1,6 +1,6 @@
 # Problem: https://leetcode.com/problems/top-k-frequent-elements/
 # Approach: Use a hashmap to keep counts of values, add a tuple containing the frequency its element to a heap that sorts based on frequency. Pop from that heap k times adding the element to res.
-# Complexity: O(n) time, O(n) space
+# Complexity: O(n log n) time, O(n) space
 
 from collections import defaultdict
 
