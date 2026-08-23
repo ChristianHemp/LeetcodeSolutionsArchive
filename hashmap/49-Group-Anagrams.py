@@ -2,6 +2,7 @@
 # Approach: Use a defaultdict to store a lists of anagrams with a tuple of length 26 containing the counts of each char as the key.
 #           ord() for ascii/unicode values, 'a' starts at 97, so for 0 index subtract ord('a') from each value to get 1 index. return list of defaultdict values.
 # Complexity: O(n) time, O(n) space
+# Enjoyment: 3/5
 
 from collections import defaultdict
 
