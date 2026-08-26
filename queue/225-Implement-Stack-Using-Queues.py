@@ -1,6 +1,7 @@
 # Problem: https://leetcode.com/problems/longest-common-prefix/
 # Approach: Keep one deque() and let the order rotate using push and popleft until correct value is first.
 # Complexity: pop, top O(n) time, push, emtpy O(1) time, O(n) space
+# Enjoyment: 2/5
 
 class MyStack:
 
