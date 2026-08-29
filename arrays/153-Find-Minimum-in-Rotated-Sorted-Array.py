@@ -1,6 +1,7 @@
 # Problem: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 # Approach: Use left and right pointers like normal binary search, but check if number before and after mid are greater than or less than respectively. If so, return mid, or mid + 1 respectively. Else continue binary search.
 # Complexity: O(log n) time, O(1) space
+# Enjoyment: 3/5
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
