@@ -1,6 +1,7 @@
 # Problem: https://leetcode.com/problems/search-in-rotated-sorted-array/
 # Approach: Modified binary search. 3 cases: mid is equal then return, mid to left is sorted then binary search, mid to right is sorted then binary search
 # Complexity: O(log n) time, O(1) space
+# Enjoyment: 3/5
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
