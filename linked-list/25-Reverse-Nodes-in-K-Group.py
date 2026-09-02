@@ -1,7 +1,7 @@
 # Problem: https://leetcode.com/problems/reverse-nodes-in-k-group/
 # Approach: Reverse linked list in segments of size k using 3 pointers, loop until remaining segment is less than k then return
 # Complexity: O(n) time, O(1) space
-# Enjoyment: 5/5 (milestone: first hard problem full blind no help)
+# Enjoyment: 5/5
 
 class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
