@@ -12,12 +12,14 @@ class Solution:
         for task in tasks:
             counts[task] += 1
         
+        # largest counts ordered first since large counts can cause idle
         heap = [-val for val in counts.values()]
         heapq.heapify(heap)
 
         q = deque()
         time = 0
 
+        # simulate tasks through time intervals
         while heap or q:
             time += 1
 
