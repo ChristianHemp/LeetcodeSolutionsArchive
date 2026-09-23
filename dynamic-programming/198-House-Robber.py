@@ -4,23 +4,39 @@
 # Enjoyment: 5/5
 
 class Solution:
+    # Use dp array of size 2
     def rob(self, nums: List[int]) -> int:
-        length = len(nums)
-
-        if length == 1:
+        # edge cases
+        if len(nums) == 1:
             return nums[0]
-        elif length <= 2:
+        elif len(nums) == 2:
             return max(nums[0], nums[1])
+
+        # initialize dp array
+        dp = [nums[0], max(nums[0], nums[1])]
+
+        for i in range(2, len(nums)):
+            temp = dp[1]
+            dp[1] = max(dp[1], dp[0] + nums[i]) # 2 choices: rob house or skip house
+            dp[0] = temp
         
-        dp = [0] * length
-        dp[0], dp[1] = nums[0], max(nums[0], nums[1])
+        return max(dp[0], dp[1])
 
-        i = 2
-        while i < length:
-            # choice 1: rob house i
-            # choice 2: skip house i
-            dp[i] = max(dp[i - 2] + nums[i], dp[i - 1])
+    """
+    # Use full dp array
+    def rob(self, nums: List[int]) -> int:
+        if len(nums) == 1:
+            return nums[1]
+        if len(nums) == 2:
+            return min(nums[1], nums[2])
 
-            i += 1
+        dp = [0] * len(nums)
+        dp[0], dp[1] = nums[0], nums[1]
 
+        for i in range(2, len(nums)):
+            # choice 1: rob house
+            # choice 2: skip house
+            dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])
+        
         return dp[-1]
+    """
