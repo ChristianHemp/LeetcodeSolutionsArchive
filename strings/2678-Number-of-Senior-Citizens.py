@@ -1,7 +1,7 @@
 # Problem: https://leetcode.com/problems/number-of-senior-citizens/
 # Approach: Get substring that represents age, cast to int and see if over 60 incrementing count for each person
 # Complexity: O(n) time, O(1) space
-# Enjoyment: 3/
+# Enjoyment: 3/5
 
 class Solution:
     def countSeniors(self, details: List[str]) -> int:
