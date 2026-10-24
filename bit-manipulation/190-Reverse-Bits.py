@@ -1,14 +1,16 @@
 # Problem: https://leetcode.com/problems/reverse-bits/
-# Approach: For each bit in the given 32 bit unsigned integer, get its value (0/1) and use a bitwise or with the result (starting at 0) to build the proper binary representation one bit at a time.
+# Approach: Check if each bit is set, while building binary string from original bitwise representation's least significant to most significant bit, returning value of binary string
 # Complexity: O(1) time, O(1) space
-# Enjoyment: 1/5
+# Enjoyment: 4/5
 
 class Solution:
     def reverseBits(self, n: int) -> int:
-        res = 0
+        result = []
 
         for i in range(32):
-            bit = (n >> i) & 1
-            res = res | (bit << (31 - i))
+            if n & (1 << i):
+                result.append("1")
+            else:
+                result.append("0")
         
-        return res
+        return int(''.join(result), 2)  # returns binary format of resulting string
